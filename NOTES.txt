@@ -1,0 +1,6 @@
+- calcSchedulePerWeek vznikla jako modifikovaná verze calcSchedule, která staví rozvrh nejprve na službách od 6 do 14:30 
+  a plánuje pro každého zaměstnance tuto službu na celý pracovní týden (střídání tedy probíhá po týdnech)
+- !calcSchedulePerWeek má změnu u wkndRule, protože původně byla jinak pochopena - pravidlo tedy nebude jen pro 12h směny, ale pro obě směny začínající od 6ti hodin ráno!
+- calcSchedulePerWeek má další změnu, která je nejspíš potřebná i pro calcSchedule - když se rozhoduje o tom, kdo bude dělat víkend a zbydou  kandidáti (se stejným minimem), může
+se stát, že oba budou splňovat podmínky pro práci o tomto víkendu, ale zároveň pro jednoho z těch kandidátů platí, že nesplňuje tu podmínku pro další víkend - a algoritmus náhodného výběru
+vybere zrovna toho kandidáta, který by mohl ten příští týden... proto je přidán test i pro tento případ (If then else...)
